@@ -1,5 +1,5 @@
 var bio = {
-    "name": "Saad",
+    "Name": "Saad Alotaibi",
     "role": "Applaction Developer",
     "contacts": {
         "mobile": 0508090266,
@@ -70,8 +70,8 @@ var projects = {
 
 
 
-var formattedName = HTMLheaderName.replace("%data%", "Saad Alotaibi");
-var formattedRole = HTMLheaderRole.replace("%data%", "Applcation Developer");
+var formattedName = HTMLheaderName.replace("%data%", bio.contacts.Name);
+var formattedRole = HTMLheaderRole.replace("%data%",  bio.contacts.role);
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
 
@@ -136,7 +136,7 @@ education.display = function() {
       $(".education-entry:last").append(formattedSchoolMajor);
 
 }
-  }
+  };
 
 
 projects.display = function() {
@@ -153,7 +153,7 @@ projects.display = function() {
 
 
 function inName(name) {
-  var   name = name.trim().split(" ");
+    name = name.trim().split(" ");
     name[1] = name[1].toUpperCase();
     name[0] = name[0].slice(0, 1).toUpperCase() + name[0].slice(1).toLowerCase();
     return name[0] + " " + name[1];

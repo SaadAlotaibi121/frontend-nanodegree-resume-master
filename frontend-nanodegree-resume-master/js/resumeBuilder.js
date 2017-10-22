@@ -14,12 +14,12 @@ var bio = {
         "Programing", "Web Development", ".NET"
     ],
     "bioPic": "./images/fry.jpg"
-}
+};
 
 
 var education = {
     "schools": [{
-            "name": "MMU",
+            "Name": "MMU",
             "location": "Manchester",
             "city": "Manchester",
             "degree": "BA",
@@ -29,7 +29,7 @@ var education = {
 
         },
         {
-            "name": "TVTC",
+            "Name": "TVTC",
             "location": "Buraydah",
             "city": "Buraydah",
             "degree": "assosited degree",
@@ -38,7 +38,7 @@ var education = {
             "url": "http://www.tvtc.gov.sa/Arabic/TrainingUnits/CollegesOfTechnology/bct/Pages/default.aspx"
         }
     ]
-}
+};
 
 var work = {
     "jobs": [{
@@ -56,7 +56,7 @@ var work = {
             "location": "Buraydah"
         }
     ]
-}
+};
 
 var projects = {
     "projects": [{
@@ -65,7 +65,7 @@ var projects = {
             "descrition": "Final year prject"
         }
     ]
-}
+};
 
 
 
@@ -103,7 +103,7 @@ if (bio.skills.length > 0) {
         $("#skills:last").append(formattedSkills);
     }
 }
-}
+};
 
 work.display = function() {
   for (var i = 0; i < work.jobs.length;  i++) {
@@ -119,12 +119,12 @@ work.display = function() {
     var formatedDescription = HTMLworkDescription.replace("%data%",work.jobs[i].descrition);
     $(".work-entry:last").append(formatedDescription);
   }
-  }
+};
 
 education.display = function() {
   for (var i = 0; i < education.schools.length; i++){
     $("#education").append(HTMLschoolStart);
-    var formatedSchoolName = HTMLschoolName.replace("%data%",education.schools[i].name);
+    var formatedSchoolName = HTMLschoolName.replace("%data%",education.schools[i].Name);
       $(".education-entry:last").append(formatedSchoolName);
     var formattedSchoolDegree = HTMLschoolDegree.replace("%data%",education.schools[i].degree);
       $(".education-entry:last").append(formattedSchoolDegree);
@@ -136,7 +136,7 @@ education.display = function() {
       $(".education-entry:last").append(formattedSchoolMajor);
 
 }
-  }
+  };
 
 
 projects.display = function() {
@@ -149,7 +149,7 @@ projects.display = function() {
         var formatttedDate = HTMLprojectDates.replace("%data%", projects.projects[i].dates);
         $(".project-entry:last").prepend(formatttedDate);
     }
-}
+};
 
 
 function inName(name) {

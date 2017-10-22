@@ -19,7 +19,7 @@ var bio = {
 
 var education = {
     "schools": [{
-            "Name": "MMU",
+            "univercity": "MMU",
             "location": "Manchester",
             "city": "Manchester",
             "degree": "BA",
@@ -29,7 +29,7 @@ var education = {
 
         },
         {
-            "Name": "TVTC",
+            "univercity": "TVTC",
             "location": "Buraydah",
             "city": "Buraydah",
             "degree": "assosited degree",
@@ -124,7 +124,7 @@ work.display = function() {
 education.display = function() {
   for (var i = 0; i < education.schools.length; i++){
     $("#education").append(HTMLschoolStart);
-    var formatedSchoolName = HTMLschoolName.replace("%data%",education.schools[i].Name);
+    var formatedSchoolName = HTMLschoolName.replace("%data%",education.schools[i].univercity);
       $(".education-entry:last").append(formatedSchoolName);
     var formattedSchoolDegree = HTMLschoolDegree.replace("%data%",education.schools[i].degree);
       $(".education-entry:last").append(formattedSchoolDegree);
@@ -136,7 +136,7 @@ education.display = function() {
       $(".education-entry:last").append(formattedSchoolMajor);
 
 }
-  };
+  }
 
 
 projects.display = function() {
@@ -153,7 +153,7 @@ projects.display = function() {
 
 
 function inName(name) {
-    var name = name.trim().split(" ");
+  var   name = name.trim().split(" ");
     name[1] = name[1].toUpperCase();
     name[0] = name[0].slice(0, 1).toUpperCase() + name[0].slice(1).toLowerCase();
     return name[0] + " " + name[1];
